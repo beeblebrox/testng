@@ -77,7 +77,9 @@ public class PackageUtils {
       }
       Enumeration<URL> dirEnumeration = classLoader.getResources(packageDirName);
       while(dirEnumeration.hasMoreElements()){
+        
         URL dir = dirEnumeration.nextElement();
+        System.out.println("URL for found package: " + dir);
         dirs.add(dir);
       }
     }
